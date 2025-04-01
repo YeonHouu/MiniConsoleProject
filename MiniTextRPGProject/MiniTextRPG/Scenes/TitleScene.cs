@@ -4,9 +4,10 @@
     {
         public override void Render()
         {
-            Console.WriteLine("**********************************");
-            Console.WriteLine("*          고양이 RPG            *");
-            Console.WriteLine("**********************************");
+            Console.WriteLine("***********************************");
+            Console.WriteLine("*             (=^‥^=)              *");
+            Console.WriteLine("*           고양이 RPG             *");
+            Console.WriteLine("***********************************");
         }
         public override void Choice()
         {
@@ -23,7 +24,10 @@
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    
+                    Game.ChangeScene("Home");
+                    break;
+                default:
+                    Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요.");
                     break;
             }
         }

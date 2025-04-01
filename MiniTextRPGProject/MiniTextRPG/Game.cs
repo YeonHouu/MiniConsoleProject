@@ -19,6 +19,7 @@ namespace MiniTextRPG
             //Scene 데이터 Directory
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
+            sceneDic.Add("Home", new TitleScene());
 
             //게임 시작 시 처음 나올 Scene
             curScene = sceneDic["TitleScene"];
