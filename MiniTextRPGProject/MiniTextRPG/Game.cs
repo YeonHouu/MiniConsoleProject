@@ -41,7 +41,9 @@ namespace MiniTextRPG
                 curScene.Choice();
                 curScene.InputKey();
                 Console.WriteLine();
+                Console.WriteLine();
                 curScene.Result();
+                Console.WriteLine();
                 Console.WriteLine();
                 curScene.Wait();
                 curScene.NextScene();

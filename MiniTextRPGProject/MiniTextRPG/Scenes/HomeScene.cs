@@ -39,12 +39,19 @@ namespace MiniTextRPG.Scenes
                     Console.WriteLine("");
                     break;
                 case ConsoleKey.D4:
-                    Console.WriteLine("");
+                    Console.WriteLine("당신은 무한한 잠의 굴레에 빠졌다..zz");
+                    break;
+                default:
+                    Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요.");
                     break;
             }
         }
 
-        public override void Wait() { }
+        public override void Wait() 
+        {
+            Console.WriteLine("계속하려면 아무키나 입력하세요.");
+            Console.ReadKey();
+        }
 
         public override void NextScene()
         {
@@ -61,9 +68,6 @@ namespace MiniTextRPG.Scenes
                     break;
                 case ConsoleKey.D4:
                     Game.ChangeScene("Title");
-                    break;
-                default:
-                    Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요.");
                     break;
             }
         }

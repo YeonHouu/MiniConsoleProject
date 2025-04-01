@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MiniTextRPG
 {
+   
     public class Player
     {
         private int speed;
