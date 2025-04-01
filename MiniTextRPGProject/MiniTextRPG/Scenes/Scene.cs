@@ -10,7 +10,7 @@ namespace MiniTextRPG.Scenes
     {
         protected ConsoleKey inputKey;
 
-        //해당 Scene 상황 설명 텍스트
+        //해당 Scene 상황 설명 텍스트 콘솔 출력
         public abstract void Render();
 
         //해당 Scene 선택지
