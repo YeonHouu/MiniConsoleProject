@@ -22,6 +22,9 @@ namespace MiniTextRPG.Scenes
         //해당 Scene 선택지 결과에 따른 다음 Scene
         public abstract void NextScene();
 
+        //해당 Scene 결과 본 후 기다리기 기능
+        public abstract void Wait();
+
         //key 입력
         public void InputKey()
         {

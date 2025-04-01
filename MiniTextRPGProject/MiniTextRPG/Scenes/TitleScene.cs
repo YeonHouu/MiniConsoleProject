@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiniTextRPG.Scenes
+﻿namespace MiniTextRPG.Scenes
 {
     public class TitleScene : Scene
     {
@@ -20,18 +14,17 @@ namespace MiniTextRPG.Scenes
             Console.WriteLine("2. 불러오기(미구현)");
             Console.WriteLine("3. 게임종료");
         }
-        public override void Result()
-        {
-            
-        }
+        public override void Result() { }
+
+        public override void Wait() { }
 
         public override void NextScene()
         {
-            switch(inputKey)
+            switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    //Game.ChangeScene();
-                        break;
+                    
+                    break;
             }
         }
     }
