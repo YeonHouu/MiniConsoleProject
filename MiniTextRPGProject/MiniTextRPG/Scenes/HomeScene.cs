@@ -12,8 +12,9 @@ namespace MiniTextRPG.Scenes
         {
             Console.WriteLine("*                    (=^‥^=)                    *");
             Console.WriteLine();
-            Console.WriteLine(" 아늑한 바구니 속에서 깨어났다... ");
-            Console.WriteLine(" 당신은 배가 고프다...  ");
+            Console.WriteLine();
+            Console.WriteLine("         아늑한 바구니 속에서 깨어났다... ");
+            Console.WriteLine("             당신은 배가 고프다...  ");
             Console.WriteLine();
             Console.WriteLine("*                                               *");
         }
@@ -22,7 +23,7 @@ namespace MiniTextRPG.Scenes
             Console.WriteLine(" 1. 바구니 속을 뒤져본다.");
             Console.WriteLine(" 2. 마을로 간다.");
             Console.WriteLine(" 3. 숲으로 간다.");
-            Console.WriteLine(" 4. 자도 자도 잠은 부족하다. 다시 잔다.");
+            Console.WriteLine(" 4. 자도 자도 잠은 부족하다. 다시 잔다..");
         }
         public override void Result() 
         {

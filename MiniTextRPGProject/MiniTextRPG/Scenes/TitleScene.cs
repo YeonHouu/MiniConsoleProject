@@ -4,10 +4,10 @@
     {
         public override void Render()
         {
-            Console.WriteLine("***********************************");
+            Console.WriteLine("************************************");
             Console.WriteLine("*             (=^‥^=)              *");
             Console.WriteLine("*           고양이 RPG             *");
-            Console.WriteLine("***********************************");
+            Console.WriteLine("************************************");
         }
         public override void Choice()
         {

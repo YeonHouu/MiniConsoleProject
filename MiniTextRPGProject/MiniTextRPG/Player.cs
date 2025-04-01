@@ -10,8 +10,9 @@ namespace MiniTextRPG
     public class Player
     {
         private int speed;
-        public int Speed { get { return speed; } set { speed = value; } }
         private int hp;
+
+        public int Speed { get { return speed; } set { speed = value; } }
         public int Hp { get { return hp; } set { hp = value; } }
     }
 }
