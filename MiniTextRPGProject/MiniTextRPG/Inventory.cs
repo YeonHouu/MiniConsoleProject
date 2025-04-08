@@ -12,7 +12,7 @@ namespace MiniTextRPG
 
         public void AddItem(Item item)
         {
-
+            inventory.Add(item);
         }
 
         public void PrintInventory(Item item)
@@ -28,8 +28,6 @@ namespace MiniTextRPG
                     Console.WriteLine(item.name);
                 }
             }
-
         }
-
     }
 }

@@ -10,13 +10,21 @@ namespace MiniTextRPG.Scenes
     {
         public override void Render()
         {
-            Console.WriteLine("*                    (=^‥^=)                    *");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("         아늑한 바구니 속에서 깨어났다... ");
-            Console.WriteLine("             당신은 배가 고프다...  ");
-            Console.WriteLine();
-            Console.WriteLine("*                                               *");
+            Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine($"|                                                                     |            |       HP :  {Game.Player.Hp}       |");
+            Console.WriteLine("|                    아늑한 바구니 속에서 깨어났다...                 |            |                       |");
+            Console.WriteLine($"|                         당신은 배가 고프다...                       |            |       SPEED :  {Game.Player.Speed}     |"); 
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine($"|                                                                     |            |       EXP :  {Game.Player.Exp}        |");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine($"|                                                                     |            |       LEVEL :  {Game.Player.Level}      |");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine("*---------------------------------------------------------------------*            *-----------------------*");
+
         }
         public override void Choice()
         {
