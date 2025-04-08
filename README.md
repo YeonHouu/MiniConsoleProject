@@ -1,2 +1,2 @@
 # MiniConsoleProject
- Sokoban style mini game
+ mini games I made while studying C#
