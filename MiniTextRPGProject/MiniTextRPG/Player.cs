@@ -29,19 +29,6 @@ namespace MiniTextRPG
             Exp = 0;
             Level = 1;
         }
-
-
-        public void PrintInfo()
-        {
-            Console.WriteLine("*                    (=^‥^=)                    *");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine($"         H P : {hp}");
-            Console.WriteLine($"         H P : {speed}");
-            Console.WriteLine($"         H P : {exp}");
-            Console.WriteLine($"         H P : {level}");
-            Console.WriteLine();
-            Console.WriteLine("*                                               *");
-        }
+                       
     }
 }

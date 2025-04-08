@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiniTextRPG.Scenes
+﻿namespace MiniTextRPG.Scenes
 {
     public class HomeScene : Scene
     {
@@ -14,9 +8,9 @@ namespace MiniTextRPG.Scenes
             Console.WriteLine("|                                                                     |            |                       |");
             Console.WriteLine("|                                                                     |            |                       |");
             Console.WriteLine($"|                                                                     |            |       HP :  {Game.Player.Hp}       |");
-            Console.WriteLine("|                    아늑한 바구니 속에서 깨어났다...                 |            |                       |");
-            Console.WriteLine($"|                         당신은 배가 고프다...                       |            |       SPEED :  {Game.Player.Speed}     |"); 
             Console.WriteLine("|                                                                     |            |                       |");
+            Console.WriteLine($"|                    아늑한 바구니 속에서 깨어났다...                 |            |       SPEED :  {Game.Player.Speed}     |");
+            Console.WriteLine("|                         당신은 배가 고프다...                       |            |                       |");
             Console.WriteLine($"|                                                                     |            |       EXP :  {Game.Player.Exp}        |");
             Console.WriteLine("|                                                                     |            |                       |");
             Console.WriteLine($"|                                                                     |            |       LEVEL :  {Game.Player.Level}      |");
@@ -33,32 +27,71 @@ namespace MiniTextRPG.Scenes
             Console.WriteLine(" 3. 숲으로 간다.");
             Console.WriteLine(" 4. 자도 자도 잠은 부족하다. 다시 잔다..");
         }
-        public override void Result() 
+        public override void Result()
         {
-            switch (inputKey)
+            
+            do
             {
-                case ConsoleKey.D1:
-                    Console.WriteLine("");
-                    break;
-                case ConsoleKey.D2:
-                    Console.WriteLine("");
-                    break;
-                case ConsoleKey.D3:
-                    Console.WriteLine("");
-                    break;
-                case ConsoleKey.D4:
-                    Console.WriteLine("당신은 무한한 잠의 굴레에 빠졌다..zz");
-                    break;
-                default:
-                    Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요.");
-                    break;
-            }
+                switch (inputKey)
+                {
+                    case ConsoleKey.D1:
+                        isCorretInputKey = true;
+                        Console.WriteLine("");
+                        break;
+
+                    case ConsoleKey.D2:
+                        isCorretInputKey = true;
+                        if (Game.Player.Level < 3)
+                        {
+                            Console.WriteLine("세상 경험이 부족한 고양이는 함부로 나갔다간 무슨 일을 당할지 모른다...");
+                            Console.WriteLine("나가기 전 준비를 하자.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("마을로 이동합니다.");
+                        }
+                        break;
+
+                    case ConsoleKey.D3:
+                        isCorretInputKey = true;
+                        if (Game.Player.Level < 3)
+                        {
+                            Console.WriteLine("세상 경험이 부족한 고양이는 함부로 나갔다간 무슨 일을 당할지 모른다...");
+                            Console.WriteLine("나가기 전 준비를 하자.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("숲으로 이동합니다.");
+                        }
+                        break;
+
+                    case ConsoleKey.D4:
+                        isCorretInputKey = true;
+                        Console.WriteLine("당신은 무한한 잠의 굴레에 빠졌다..zz");
+                        break;
+
+                    default:
+                        isCorretInputKey = false;
+                        Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요...");
+                        Console.WriteLine();
+                        InputKey();
+                        break;
+                }
+            } while (isCorretInputKey == false);
         }
 
-        public override void Wait() 
+        public override void Wait()
         {
-            Console.WriteLine("계속하려면 아무키나 입력하세요.");
-            Console.ReadKey();
+            if (isCorretInputKey == true)
+            {
+                Console.WriteLine("계속하려면 아무키나 입력하세요.");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine();
+            }
+
         }
 
         public override void NextScene()
@@ -66,13 +99,23 @@ namespace MiniTextRPG.Scenes
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    Console.WriteLine("");
+                    Game.ChangeScene("Home");
                     break;
                 case ConsoleKey.D2:
-                    Console.WriteLine("");
+                    if (Game.Player.Level < 3)
+                    {
+                        Game.ChangeScene("Home");
+                    }
+                    else
+                        Game.ChangeScene("Forest");
                     break;
                 case ConsoleKey.D3:
-                    Console.WriteLine("");
+                    if (Game.Player.Level < 3)
+                    {
+                        Game.ChangeScene("Home");
+                    }
+                    else
+                        Game.ChangeScene("Town");
                     break;
                 case ConsoleKey.D4:
                     Game.ChangeScene("Title");

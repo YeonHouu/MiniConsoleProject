@@ -9,6 +9,8 @@ namespace MiniTextRPG.Scenes
     public abstract class Scene
     {
         protected ConsoleKey inputKey;
+        protected bool isCorretInputKey;
+
 
         //해당 Scene 상황 설명 텍스트 콘솔 출력
         public abstract void Render();
