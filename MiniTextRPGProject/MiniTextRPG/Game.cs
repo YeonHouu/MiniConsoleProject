@@ -22,6 +22,7 @@ namespace MiniTextRPG
             sceneDic = new Dictionary<string, Scene>();
             sceneDic.Add("Title", new TitleScene());
             sceneDic.Add("Home", new HomeScene());
+            sceneDic.Add("Room", new RoomScene());
             sceneDic.Add("Town", new TownScene());
             sceneDic.Add("Forest", new ForestScene());
 

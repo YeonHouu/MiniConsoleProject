@@ -10,6 +10,7 @@ namespace MiniTextRPG.Scenes
     {
         protected ConsoleKey inputKey;
         protected bool isCorretInputKey;
+        protected static bool isRoomDone = false;
 
 
         //해당 Scene 상황 설명 텍스트 콘솔 출력
