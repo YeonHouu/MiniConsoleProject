@@ -24,10 +24,10 @@
         { 
             if(isRoomDone == false)
             {
-            Console.WriteLine(" 1. 마을로 간다.");
-            Console.WriteLine(" 2. 숲으로로 간다.");
-            Console.WriteLine(" 3. 바구니 속을 뒤져본다.");
-            Console.WriteLine(" 4. 자도 자도 잠은 부족하다. 다시 잔다..");
+                Console.WriteLine(" 1. 마을로 간다.");
+                Console.WriteLine(" 2. 숲으로로 간다.");
+                Console.WriteLine(" 3. 바구니 속을 뒤져본다.");
+                Console.WriteLine(" 4. 자도 자도 잠은 부족하다. 다시 잔다..");
 
             }
             // 모든 할 일 끝났으면 이후에 RoomScene 재방문 불가
@@ -134,7 +134,7 @@
                         Game.ChangeScene("Home");
                     }
                     else
-                        Game.ChangeScene("Forest");
+                        Game.ChangeScene("Town");
                     break;
                 case ConsoleKey.D2:
                     if (Game.Player.Level < 2)

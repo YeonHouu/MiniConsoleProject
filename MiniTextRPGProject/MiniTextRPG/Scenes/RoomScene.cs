@@ -78,18 +78,19 @@
                         if (isChurDone == false)
                         {
                             isChurDone = true;
-                            Game.Player.Exp =+ 50;
+                            Game.Player.ExpUp(50);
                             Console.WriteLine("언제 먹어도 눈이 번쩍 떠지는 맛");
                             Console.WriteLine("츄 르 는 너 무 맛 있 어 ! ! !");
                             Console.WriteLine();
                             Console.ReadKey();
                             Console.WriteLine("          (=^OωO^=)         ");
+                            Console.WriteLine();
                             Console.WriteLine("츄르는 고양이의 인생이다.");
                             Console.WriteLine("인생의 경험치가 조금 쌓인 기분이 든다.");
                             // TODO: 커서 위치 조정
                             Console.ReadKey();
                             Console.WriteLine();
-                            Console.WriteLine("경험치 50 증가");
+                            Game.Player.ExpUp(50);
 
                             if((isChurDone == true) && (isBallDone == true))
                             {
@@ -103,17 +104,18 @@
                         else if ((isChurDone == true) && (isBallDone == false))
                         {
                             isBallDone = true;
-                            Game.Player.Exp =+ 50;
                             Console.WriteLine("           (=^OωO^=)     ");
+                            Console.WriteLine();
                             Console.WriteLine("공을 때리니 튀어올라 바구니 밖으로 나갔다.");
                             Console.WriteLine("멈춰라 ! ! !");
                             Console.ReadKey();
+                            Console.WriteLine();
                             Console.WriteLine("헥 헥...");
                             Console.WriteLine("이리저리 피하는 공을 쫓다 보니 숨이 찬다..");
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
-                            Console.WriteLine("경험치 50 증가");
+                            Game.Player.ExpUp(50);
                             Console.ReadKey();
                             Console.WriteLine();
                             Console.WriteLine("바구니에는 더이상 볼 일이 없다...");
@@ -132,7 +134,7 @@
                         if ((isChurDone == false) && (isBallDone == false))
                         {
                             isBallDone = true;
-                            Game.Player.Exp =+ 50;
+                            Game.Player.ExpUp(50);
                             Console.WriteLine("           (=^OωO^=)     ");
                             Console.WriteLine("공을 때리니 튀어올라 바구니 밖으로 나갔다.");
                             Console.WriteLine("멈춰라 ! ! !");
@@ -142,7 +144,7 @@
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
-                            Console.WriteLine("경험치 50 증가");
+                            Game.Player.ExpUp(50);
                         }
                         else if((isChurDone == false) || (isBallDone  == false))
                         {

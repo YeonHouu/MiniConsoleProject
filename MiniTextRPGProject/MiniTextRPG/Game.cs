@@ -1,4 +1,5 @@
 ﻿using MiniTextRPG.Scenes;
+using MiniTextRPG.Scenes.Town;
 
 namespace MiniTextRPG
 {
@@ -25,6 +26,9 @@ namespace MiniTextRPG
             sceneDic.Add("Room", new RoomScene());
             sceneDic.Add("Town", new TownScene());
             sceneDic.Add("Forest", new ForestScene());
+            sceneDic.Add("ItemShop", new ItemShopScene());
+            sceneDic.Add("FishStore", new FishStoreScene());
+            sceneDic.Add("InteriorShop", new InteriorShopScene());
 
             // 게임 시작 시 처음 나올 Scene
             curScene = sceneDic["Title"];
@@ -53,7 +57,6 @@ namespace MiniTextRPG
                 Console.WriteLine();
                 Console.WriteLine();
                 curScene.Result();
-                Console.WriteLine();
                 Console.WriteLine();
                 curScene.Wait();
                 curScene.NextScene();
