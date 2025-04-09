@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace MiniTextRPG
 {
-    class Inventory
+    public class Inventory
     {
-        public List<Item> inventory = new List<Item>(10);
+        public List<Item> inventory;
+
+        public Inventory()
+        {
+            inventory = new List<Item>(5);
+        }
 
         public void AddItem(Item item)
         {
             inventory.Add(item);
         }
 
-        public void PrintInventory(Item item)
+        public void Print()
         {
             foreach (Item items in inventory)
             {
@@ -25,7 +30,7 @@ namespace MiniTextRPG
                 }
                 else
                 {
-                    Console.WriteLine(item.name);
+                    Console.WriteLine(items.name);
                 }
             }
         }

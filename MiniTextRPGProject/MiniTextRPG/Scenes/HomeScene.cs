@@ -29,7 +29,6 @@
         }
         public override void Result()
         {
-            
             do
             {
                 switch (inputKey)
