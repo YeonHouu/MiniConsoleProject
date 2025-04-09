@@ -22,15 +22,16 @@ namespace MiniTextRPG
 
         public void Print()
         {
-            foreach (Item items in inventory)
+            foreach (Item item in inventory)
             {
-                if(inventory == null)
+                if (inventory.Count == 0)
                 {
-                    break;
+                    Console.WriteLine("인벤토리에 아이템이 없습니다.");
+                    return;
                 }
                 else
                 {
-                    Console.WriteLine(items.name);
+                    Console.WriteLine(item.name);
                 }
             }
         }

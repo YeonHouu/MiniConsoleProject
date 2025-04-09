@@ -1,6 +1,12 @@
-﻿namespace MiniTextRPG.Scenes
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MiniTextRPG.Scenes.Forest
 {
-    public class ForestScene : Scene
+    class ForestFightScene: Scene
     {
         public override void Render()
         {
@@ -9,9 +15,9 @@
             Console.WriteLine();
             Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                    고요한 숲속이다...                                    SPEED :  {Game.Player.Speed}     ");
-            Console.WriteLine("                      숲에는 두갈래 길이 있다.                                                           ");
-            Console.WriteLine($"                    어느 쪽으로 가볼까?                                                                      EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                    왼쪽 숲으로 오자마자 야생의 닭이 보인다...!                                    SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine("                      이 닭을 어떻게 할까?                                                           ");
+            Console.WriteLine($"                                                                                     EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
             Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
@@ -22,8 +28,8 @@
         }
         public override void Choice()
         {
-            Console.WriteLine(" 1. 왼쪽");
-            Console.WriteLine(" 2. 오른쪽");
+            Console.WriteLine(" 1. 받아랏 냥냥펀치 ! ! !");
+            Console.WriteLine(" 2. 부리가 날카로워보인다.. 도망간다...");
         }
         public override void Result()
         {
@@ -67,10 +73,10 @@
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                        Game.ChangeScene("Town");
+                    Game.ChangeScene("ForestFight");
                     break;
                 case ConsoleKey.D2:
-                    Game.ChangeScene("Town");
+                    Game.ChangeScene("Forest");
                     break;
             }
         }

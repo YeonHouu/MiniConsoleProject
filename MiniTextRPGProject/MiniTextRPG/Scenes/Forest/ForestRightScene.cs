@@ -1,6 +1,12 @@
-﻿namespace MiniTextRPG.Scenes
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MiniTextRPG.Scenes.Forest
 {
-    public class ForestScene : Scene
+    class ForestRightScene : Scene
     {
         public override void Render()
         {
@@ -67,7 +73,7 @@
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                        Game.ChangeScene("Town");
+                    Game.ChangeScene("Town");
                     break;
                 case ConsoleKey.D2:
                     Game.ChangeScene("Town");

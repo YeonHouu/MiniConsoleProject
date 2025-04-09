@@ -1,5 +1,7 @@
 ﻿using MiniTextRPG.Scenes;
+using MiniTextRPG.Scenes.Forest;
 using MiniTextRPG.Scenes.Town;
+using MiniTextRPG;
 
 namespace MiniTextRPG
 {
@@ -29,6 +31,12 @@ namespace MiniTextRPG
             sceneDic.Add("ItemShop", new ItemShopScene());
             sceneDic.Add("FishStore", new FishStoreScene());
             sceneDic.Add("InteriorShop", new InteriorShopScene());
+            sceneDic.Add("ForestLeft", new ForestLeftScene());
+            sceneDic.Add("ForestRight", new ForestRightScene());
+            sceneDic.Add("ForestFight", new ForestFightScene());
+            sceneDic.Add("ForestLake", new ForestLakeScene());
+            
+
 
             // 게임 시작 시 처음 나올 Scene
             curScene = sceneDic["Title"];
@@ -39,9 +47,8 @@ namespace MiniTextRPG
             // 콘솔에서 커버 숨김
             Console.CursorVisible = false;
 
-            // 모든 아이템 인스턴스 생성
+            // 모든 아이템 생성
             Item.ItemMaker();
-           
         }
 
         public static void Run()

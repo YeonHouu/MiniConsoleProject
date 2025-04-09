@@ -90,6 +90,7 @@
                             // TODO: 커서 위치 조정
                             Console.ReadKey();
                             Console.WriteLine();
+                            //경험치 증가
                             Game.Player.ExpUp(50);
 
                             if((isChurDone == true) && (isBallDone == true))
@@ -115,6 +116,7 @@
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
+                            // 경험치 증가
                             Game.Player.ExpUp(50);
                             Console.ReadKey();
                             Console.WriteLine();
@@ -144,6 +146,7 @@
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
+                            // 경험치 증가
                             Game.Player.ExpUp(50);
                         }
                         else if((isChurDone == false) || (isBallDone  == false))
