@@ -35,8 +35,6 @@ namespace MiniTextRPG
             sceneDic.Add("ForestRight", new ForestRightScene());
             sceneDic.Add("ForestFight", new ForestFightScene());
             sceneDic.Add("ForestLake", new ForestLakeScene());
-            
-
 
             // 게임 시작 시 처음 나올 Scene
             curScene = sceneDic["Title"];
@@ -46,9 +44,6 @@ namespace MiniTextRPG
 
             // 콘솔에서 커버 숨김
             Console.CursorVisible = false;
-
-            // 모든 아이템 생성
-            Item.ItemMaker();
         }
 
         public static void Run()

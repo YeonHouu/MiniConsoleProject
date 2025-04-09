@@ -12,7 +12,7 @@ namespace MiniTextRPG
 
         public Inventory()
         {
-            inventory = new List<Item>(5);
+            inventory = new List<Item>();
         }
 
         public void AddItem(Item item)
@@ -22,18 +22,21 @@ namespace MiniTextRPG
 
         public void Print()
         {
+            Console.WriteLine("*--------------------------------인벤토리-------------------------------*");
             foreach (Item item in inventory)
             {
                 if (inventory.Count == 0)
                 {
-                    Console.WriteLine("인벤토리에 아이템이 없습니다.");
+                    Console.WriteLine("텅 ~");
                     return;
                 }
                 else
                 {
-                    Console.WriteLine(item.name);
+                    Console.WriteLine($"{item.name} : {item.description}");
                 }
             }
+            Console.WriteLine("*---------------------------------------------------------------------*");
+
         }
     }
 }

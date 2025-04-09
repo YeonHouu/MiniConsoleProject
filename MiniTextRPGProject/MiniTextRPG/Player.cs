@@ -68,6 +68,5 @@ namespace MiniTextRPG
                 Hp = maxHp;
             }
         }
-
     }
 }
