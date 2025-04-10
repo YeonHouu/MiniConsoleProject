@@ -24,6 +24,7 @@
         {
             Console.WriteLine(" 1. 왼쪽");
             Console.WriteLine(" 2. 오른쪽");
+            Console.WriteLine(" 3. 집으로 돌아간다...");
         }
         public override void Result()
         {
@@ -36,6 +37,10 @@
                         break;
 
                     case ConsoleKey.D2:
+                        isCorretInputKey = true;
+                        break;
+
+                    case ConsoleKey.D3:
                         isCorretInputKey = true;
                         break;
 
@@ -67,10 +72,15 @@
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                        Game.ChangeScene("Town");
+                        Game.ChangeScene("ForestLeft");
                     break;
+
                 case ConsoleKey.D2:
-                    Game.ChangeScene("Town");
+                    Game.ChangeScene("ForestRight");
+                    break;
+
+                case ConsoleKey.D3:
+                    Game.ChangeScene("Home");
                     break;
             }
         }
