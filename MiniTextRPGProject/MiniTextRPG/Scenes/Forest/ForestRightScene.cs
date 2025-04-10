@@ -13,13 +13,13 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                          HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                 왼쪽 숲으로 오자마자 {Game.Chicken.Name}이 보인다...!                                    SPEED :  {Game.Player.Speed}     ");
-            Console.WriteLine("                      이 닭을 어떻게 할까?                                                           ");
-            Console.WriteLine($"                                                                                     EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                 오른쪽 숲으로 오자마자 {Game.Chicken.Name}이 보인다...!                         SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                      이 {Game.Chicken.Name}을 어떻게 할까?");
+            Console.WriteLine($"                                                                                         EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                                                                                       LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();

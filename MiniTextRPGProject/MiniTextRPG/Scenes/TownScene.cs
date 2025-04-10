@@ -41,13 +41,21 @@
 
                     case ConsoleKey.D2:
                         isCorretInputKey = true;
-
-                        Console.WriteLine("생선 가게로 간다...");
+                        if (Game.Player.Level < 5)
+                        {
+                            Console.WriteLine("큰 개가 가게 앞을 지키고 있다...");
+                            Console.WriteLine("개와 대면할 엄두가 나지 않는다..");
+                            Console.WriteLine("내공을 더 쌓고 오자...");
+                        }
+                        else
+                        {
+                            Console.WriteLine("장식품 가게로 간다...");
+                        }
                         break;
 
                     case ConsoleKey.D3:
                         isCorretInputKey = true;
-                        if (Game.Player.Level < 3)
+                        if (Game.Player.Level < 5)
                         {
                             Console.WriteLine("아직 인생의 경험이 부족하다...");
                             Console.WriteLine("장식품의 아름다움을 느끼려면 수행이 더 필요하다.");
@@ -96,11 +104,18 @@
                     break;
 
                 case ConsoleKey.D2:
-                    Game.ChangeScene("FishStore");
+                    if (Game.Player.Level < 5)
+                    {
+                        Game.ChangeScene("Town");
+                    }
+                    else
+                    {
+                        Game.ChangeScene("FishStore");
+                    }
                     break;
 
                 case ConsoleKey.D3:
-                    if (Game.Player.Level < 3)
+                    if (Game.Player.Level < 5)
                     {
                         Game.ChangeScene("Town");
                     }

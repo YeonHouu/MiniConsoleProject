@@ -29,7 +29,6 @@ namespace MiniTextRPG.Scenes.Town
 
         public override void NextScene()
         {
-           
             
         }
     }

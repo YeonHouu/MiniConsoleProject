@@ -7,13 +7,13 @@
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                         HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                    고요한 숲속이다...                                    SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                        고요한 숲속이다...                                               SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      숲에는 두갈래 길이 있다.                                                           ");
-            Console.WriteLine($"                    어느 쪽으로 가볼까?                                                                      EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                        어느 쪽으로 가볼까?                                                EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                                                                                         LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();

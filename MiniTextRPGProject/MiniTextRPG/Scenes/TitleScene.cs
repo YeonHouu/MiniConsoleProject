@@ -13,7 +13,7 @@
         {
             Console.WriteLine("1. 게임시작");
             Console.WriteLine("2. 불러오기(미구현)");
-            Console.WriteLine("3. 게임종료");
+            Console.WriteLine("3. 게임종료(미구현)");
         }
         public override void Result() { }
 
@@ -25,9 +25,6 @@
             {
                 case ConsoleKey.D1:
                     Game.ChangeScene("Home");
-                    break;
-                default:
-                    Console.WriteLine("잘못 입력 하셨습니다. 다시 입력해주세요.");
                     break;
             }
         }

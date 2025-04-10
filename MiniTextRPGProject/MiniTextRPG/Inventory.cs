@@ -37,7 +37,7 @@ namespace MiniTextRPG
                     Console.WriteLine($"{item.Name} : {item.Description}");
                 }
             }
-            Console.WriteLine("*---------------------------------------------------------------------*");
+            Console.WriteLine("*-----------------------------------------------------------------------*");
 
         }
     }

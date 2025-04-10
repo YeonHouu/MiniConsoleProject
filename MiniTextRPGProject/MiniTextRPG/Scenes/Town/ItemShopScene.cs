@@ -28,11 +28,11 @@
                 Console.WriteLine();
                 Console.WriteLine($"                                                                                        HP :  {Game.Player.Hp}       ");
                 Console.WriteLine("");
-                Console.WriteLine($"                주인이 두 눈을 시퍼렇게 뜨고 가게 앞에 서있다...                         SPEED :  {Game.Player.Speed}     ");
+                Console.WriteLine($"                주인이 두 눈을 시퍼렇게 뜨고 가게 앞에 서있다...                     SPEED :  {Game.Player.Speed}     ");
                 Console.WriteLine("");
-                Console.WriteLine($"                        물건을 가져가긴 힘들어 보인다.                                    EXP :  {Game.Player.Exp}        ");
+                Console.WriteLine($"                        물건을 가져가긴 힘들어 보인다.                                EXP :  {Game.Player.Exp}        ");
                 Console.WriteLine("");
-                Console.WriteLine($"                                                                                      LEVEL :  {Game.Player.Level}      ");
+                Console.WriteLine($"                                                                                    LEVEL :  {Game.Player.Level}      ");
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine();

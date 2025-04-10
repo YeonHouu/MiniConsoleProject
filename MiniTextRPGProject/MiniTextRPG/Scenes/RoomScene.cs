@@ -9,13 +9,13 @@
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                            바구니 안에서                                                   HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                            바구니 안에서                                                HP :  {Game.Player.Hp}       ");
             Console.WriteLine("");
             Console.WriteLine($"                        어제 먹고 남은 [ 츄르 ]                                       SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      어디서 주워왔는지 모르겠는 [ 공 ]                                                         ");
-            Console.WriteLine($"                                                                                           EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                                                                                       EXP :  {Game.Player.Exp}        ");
             Console.WriteLine("                             을 발견했다.");
-            Console.WriteLine($"                          이제 무엇을 할까?                                                LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                          이제 무엇을 할까?                                            LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
@@ -52,13 +52,13 @@
             if ((isChurDone == false) && (isBallDone == false))
             {
                 Console.WriteLine(" 1. 츄르를 보고 지나치는 고양이가 있나? 당장 입에 넣는다.");
-                Console.WriteLine(" 2. 운동 부족 고양이는 살아남을 수 없다. 공을 가지고 논다.");
+                Console.WriteLine(" 2. 운동부족 고양이는 살아남을 수 없다. 공을 가지고 논다.");
                 Console.WriteLine(" 3. 바구니에서 나온다.");
             }
             else if ((isChurDone == true) && (isBallDone == false))
             {
 
-                Console.WriteLine(" 1. 운동 부족 고양이는 살아남을 수 없다. 공을 가지고 논다.");
+                Console.WriteLine(" 1. 운동부족 고양이는 살아남을 수 없다. 공을 가지고 논다.");
                 Console.WriteLine(" 2. 바구니에서 나온다.");
             }
             else if ((isChurDone == false) && (isBallDone == true))

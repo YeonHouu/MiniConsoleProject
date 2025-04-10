@@ -13,13 +13,13 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                         HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                                                                                      SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine($"                    {Game.Chicken.Name}이랑 싸운다!                                                                     ");
-            Console.WriteLine($"                                                                                     EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                                                                                        EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                                                                                      LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
@@ -79,7 +79,7 @@ namespace MiniTextRPG.Scenes.Forest
                 case ConsoleKey.D1:
                     if(Game.Chicken.IsAlive == false)
                     {
-                        Game.ChangeScene("Home");
+                        Game.ChangeScene("End");
                     }
                     else
                     {
