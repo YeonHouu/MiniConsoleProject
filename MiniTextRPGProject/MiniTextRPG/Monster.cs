@@ -7,14 +7,16 @@
         public int Attack { get; set; }
         public int Speed { get; set; }
         public bool IsAlive { get; set; }
+        public Item DropItem { get; }
 
-        public Monster(string name, int hp, int attack, int speed, bool isAlive)
+        public Monster(string name, int hp, int attack, int speed, bool isAlive, Item dropItem)
         {
             Name = name;
             Hp = hp;
             Attack = attack;
             Speed = speed;
             IsAlive = isAlive;
+            DropItem = dropItem;
         }
 
         public void PrintInfo(Monster monster)
@@ -39,6 +41,6 @@
         // 몬스터 목록
 
         // #Forest - Fight
-        public static Monster chicken => new Monster("야생의 닭", 50, 10, 1, true);
+        public static Monster chicken => new Monster("야생의 닭", 50, 10, 1, true, Item.chickenMeat);
     }
 }

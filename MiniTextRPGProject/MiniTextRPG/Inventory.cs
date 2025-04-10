@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiniTextRPG
+﻿namespace MiniTextRPG
 {
     public class Inventory
     {
@@ -18,8 +12,10 @@ namespace MiniTextRPG
         public void AddItem(Item item)
         {
             inventory.Add(item);
+            Console.WriteLine($"[ {item.Name} ]을(를) 획득했다!");
             Console.WriteLine();
             Print();
+            Console.WriteLine();
         }
 
         public void Print()
@@ -34,7 +30,9 @@ namespace MiniTextRPG
                 }
                 else
                 {
+                    Console.WriteLine();
                     Console.WriteLine($"{item.Name} : {item.Description}");
+                    Console.WriteLine();
                 }
             }
             Console.WriteLine("*-----------------------------------------------------------------------*");

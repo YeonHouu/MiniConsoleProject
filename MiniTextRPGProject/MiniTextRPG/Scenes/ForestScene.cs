@@ -34,10 +34,12 @@
                 {
                     case ConsoleKey.D1:
                         isCorretInputKey = true;
+                        Console.WriteLine("숲의 왼쪽 길로 간다.");
                         break;
 
                     case ConsoleKey.D2:
                         isCorretInputKey = true;
+                        Console.WriteLine("숲의 오른쪽 길로 간다.");
                         break;
 
                     case ConsoleKey.D3:

@@ -72,6 +72,8 @@ namespace MiniTextRPG
                 monster.Hp = 0;
                 monster.IsAlive = false;
                 Console.WriteLine($"{monster.Name}이(가) 사망했다.");
+                // 몬스터 dropItem 획득
+                Game.Player.Inventory.AddItem(monster.DropItem);
                 Console.WriteLine("전투에서 이겨서 기분이 좋다! 집으로 돌아간다 ♪");
             }
         }
