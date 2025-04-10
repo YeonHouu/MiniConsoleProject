@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MiniTextRPG.Scenes.Forest
+﻿namespace MiniTextRPG.Scenes.Forest
 {
     class ForestLakeScene : Scene
     {
@@ -13,22 +7,22 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                       HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                 오른쪽 숲으로 들어오니 눈앞에 큰 호수가 보인다...          SPEED :  {Game.Player.Speed}     ");
-            Console.WriteLine("                      물고기가 많을지도 모른다!                                                           ");
-            Console.WriteLine($"                       기다려 물고기야 ! !                                  EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                     와 물고기 천국이다 ! !                                             SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine("                          다 내꺼 ! ! !                                                           ");
+            Console.WriteLine($"                                                                                          EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                    LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("*---------------------------------------------------------------------*            *-----------------------*");
         }
-            public override void Choice()
+        public override void Choice()
         {
             Console.WriteLine(" 1. 낚싯대를 사용한다 ");
-            Console.WriteLine(" 2. 지금 낚시는 하고싶지 않다. 숲으로 돌아간다...");
+            Console.WriteLine(" 2. 지금 낚시는 하고싶지 않다. 숲의 입구로 돌아간다...");
         }
 
         public override void Result()
@@ -39,13 +33,18 @@ namespace MiniTextRPG.Scenes.Forest
                 {
                     case ConsoleKey.D1:
                         isCorretInputKey = true;
+
+                        // 플레이어 인벤토리 아이템 유무 체크
+                        if (Game.Player.Inventory.inventory.Contains(Item.fishPole) == false)
+                        {
+                            Game.Player.Inventory.Print();
+                            Console.WriteLine("이런 [ 낚싯대 ]를 가지고 있지 않다...");
+                            Console.WriteLine("낚시는 물 건너갔다..");
+                            Console.WriteLine("숲의 입구로 돌아간다.");
+                        }
                         break;
 
                     case ConsoleKey.D2:
-                        isCorretInputKey = true;
-                        break;
-
-                    case ConsoleKey.D3:
                         isCorretInputKey = true;
                         break;
 
@@ -76,10 +75,13 @@ namespace MiniTextRPG.Scenes.Forest
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    Game.ChangeScene("ForestLeft");
+                    if (Game.Player.Inventory.inventory.Contains(Item.fishPole) == false)
+                    {
+                        Game.ChangeScene("Forest");
+                    }
                     break;
                 case ConsoleKey.D2:
-                    Game.ChangeScene("ForestRight");
+                    Game.ChangeScene("Forest");
                     break;
                 case ConsoleKey.D3:
                     Game.ChangeScene("Home");

@@ -7,7 +7,7 @@
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                         HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                            HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
             Console.WriteLine($"                        고요한 숲속이다...                                               SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      숲에는 두갈래 길이 있다.                                                           ");

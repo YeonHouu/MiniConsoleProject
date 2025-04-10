@@ -31,7 +31,7 @@ namespace MiniTextRPG.Scenes
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("                  끝... 업데이트.... 예정.. 아마도....");
+            Console.WriteLine("                      업데이트.... 예정.. 아마도....");
         }
         
         public override void Choice()

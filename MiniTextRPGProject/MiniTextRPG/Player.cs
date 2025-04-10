@@ -39,7 +39,7 @@ namespace MiniTextRPG
             //레벨 업
             if (Exp >= maxExp)
             {
-                Exp = exp % maxExp;
+                Exp = Exp % maxExp;
                 Level++;
                 Console.WriteLine($"레벨 업!");
                 Console.WriteLine($"Lv.{Level-1} -> Lv.{Level}");

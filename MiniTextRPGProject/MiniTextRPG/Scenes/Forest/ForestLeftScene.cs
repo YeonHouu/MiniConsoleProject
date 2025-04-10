@@ -13,13 +13,13 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine("*---------------------------------------------------------------------*            *---     (=^‥^=)     ---*");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
+            Console.WriteLine($"                                                                                            HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                 오른쪽 숲으로 들어오니 눈앞에 큰 호수가 보인다...                                    SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"            오른쪽 숲으로 들어오니 눈앞에 큰 호수가 보인다...                            SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      물고기가 많을지도 모른다!                                                           ");
-            Console.WriteLine($"                       기다려 물고기야 ! !                                                              EXP :  {Game.Player.Exp}        ");
+            Console.WriteLine($"                       기다려 물고기야 ! !                                                 EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
-            Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                                                                                         LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
@@ -73,7 +73,7 @@ namespace MiniTextRPG.Scenes.Forest
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    Game.ChangeScene("Town");
+                    Game.ChangeScene("ForestLake");
                     break;
                 case ConsoleKey.D2:
                     Game.ChangeScene("Forest");
