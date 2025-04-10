@@ -2,6 +2,7 @@
 using MiniTextRPG.Scenes.Forest;
 using MiniTextRPG.Scenes.Town;
 using MiniTextRPG;
+using System.Reflection.Metadata.Ecma335;
 
 namespace MiniTextRPG
 {
@@ -17,7 +18,10 @@ namespace MiniTextRPG
         public Scene CurScene { get { return curScene; } set { curScene = value; } }
 
         private static Player player;
+        private static Monster chicken;
+        public static Monster Chicken { get { return chicken; } }
         public static Player Player { get { return player; } }
+        public static Monster Monster { get; }
 
         public static void Start()
         {
@@ -41,6 +45,7 @@ namespace MiniTextRPG
 
             // 플레이어 인스턴스 생성
             player = new Player();
+            chicken = Monster.chicken;
 
             // 콘솔에서 커버 숨김
             Console.CursorVisible = false;

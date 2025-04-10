@@ -27,11 +27,11 @@ namespace MiniTextRPG
         // 아이템 목록
 
         // #Town - 잡화점
-        public static Item fishPole => new Item("낚시대", "긴 막대기에 줄이 달려있다.", 0, 0, ConsoleColor.Cyan);
-        public static Item fishCan => new Item("생선 통조림", "매일 매대에 놓아져 있는 평범한 생선 통조림.", 10, 1, ConsoleColor.Cyan);
+        public static Item fishPole => new Item("낚싯대", "긴 막대기에 줄이 달려있다.", 0, 0, ConsoleColor.Cyan);
+        public static Item fishCan => new Item("생선 통조림", "매일 매대에 놓여져 있는 평범한 생선 통조림.", 10, 1, ConsoleColor.Cyan);
 
         // #Town - 생선가게
-        public static Item fish => new Item("생선", "도미, 농어, 넙치, 가자미, 대구", 20, 2, ConsoleColor.Cyan);
+        public static Item fish => new Item("생선", "농어", 20, 2, ConsoleColor.Cyan);
 
         // #Town - 장식품가게
         public static Item blueOrnament => new Item("하늘색 풍경", "하늘색 유리 풍경. 풍판 바람에 흔들릴 때마다 좋은 소리가 난다.", 0, 10, ConsoleColor.Cyan);

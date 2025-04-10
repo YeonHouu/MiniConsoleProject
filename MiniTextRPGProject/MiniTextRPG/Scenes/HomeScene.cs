@@ -34,7 +34,7 @@
             else if(isRoomDone == true)
             {
                 Console.WriteLine(" 1. 마을로 간다.");
-                Console.WriteLine(" 2. 숲으로로 간다.");
+                Console.WriteLine(" 2. 숲으로 간다.");
                 Console.WriteLine(" 3. 자도 자도 잠은 부족하다. 다시 잔다..");
             }
         }

@@ -10,30 +10,25 @@ namespace MiniTextRPG
    
     public class Player
     {
-        private int speed;
-        private int hp;
         private int maxHp;
-        private int exp;
         private int maxExp;
-        private int level;
-        private Inventory inventory;
 
-        private string playerLocation;
-        public int Speed { get { return speed; } set { speed = value; } }
-        public int Hp { get { return hp; } set { hp = value; } }
-        public int Exp { get { return exp; } set { exp = value; } }
-        
-        public int Level { get { return level; } set { level = value; } }
-        public Inventory Inventory { get { return inventory; } }
+        public int Speed { get; set; }
+        public int Attack { get; set; }
+        public int Hp { get; set; }
+        public int Exp { get; set; }
+        public int Level { get; set; }
+        public Inventory Inventory { get; }
 
         public Player()
         {
             Hp = 100;
-            Speed = 10;
+            Speed = 5;
+            Attack = 10;
             Exp = 0;
             maxExp = 100;
             Level = 1;
-            inventory = new Inventory();
+            Inventory = new Inventory();
         }
 
         public void ExpUp(int exp)
@@ -42,10 +37,10 @@ namespace MiniTextRPG
             Console.WriteLine($"Exp {exp} 증가!");
 
             //레벨 업
-            if (Exp == maxExp)
+            if (Exp >= maxExp)
             {
-                Exp = 0;
-                level++;
+                Exp = exp % maxExp;
+                Level++;
                 Console.WriteLine($"레벨 업!");
                 Console.WriteLine($"Lv.{Level-1} -> Lv.{Level}");
             }
@@ -66,6 +61,18 @@ namespace MiniTextRPG
             if (Hp >= maxHp)
             {
                 Hp = maxHp;
+            }
+        }
+        public void AttackMonster(Monster monster)
+        {
+            monster.Hp -= Attack;
+            Console.WriteLine($"{monster.Name}을(를) 공격했다.");
+            if(monster.Hp <= 0)
+            {
+                monster.Hp = 0;
+                monster.IsAlive = false;
+                Console.WriteLine($"{monster.Name}이(가) 사망했다.");
+                Console.WriteLine("전투에서 이겨서 기분이 좋다! 집으로 돌아간다 ♪");
             }
         }
     }

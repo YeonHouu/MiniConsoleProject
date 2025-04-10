@@ -27,9 +27,8 @@ namespace MiniTextRPG.Scenes.Forest
         }
             public override void Choice()
         {
-            Console.WriteLine(" 1. 왼쪽");
-            Console.WriteLine(" 2. 오른쪽");
-            Console.WriteLine(" 3. 집으로 돌아간다...");
+            Console.WriteLine(" 1. 낚싯대를 사용한다 ");
+            Console.WriteLine(" 2. 지금 낚시는 하고싶지 않다. 숲으로 돌아간다...");
         }
 
         public override void Result()

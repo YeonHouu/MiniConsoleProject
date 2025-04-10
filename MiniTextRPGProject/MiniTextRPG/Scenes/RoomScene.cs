@@ -11,11 +11,11 @@
             Console.WriteLine();
             Console.WriteLine($"                            바구니 안에서                                                   HP :  {Game.Player.Hp}       ");
             Console.WriteLine("");
-            Console.WriteLine($"                        어제 먹고 남은 [ 츄르 ] !!!                                    SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                        어제 먹고 남은 [ 츄르 ]                                       SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      어디서 주워왔는지 모르겠는 [ 공 ]                                                         ");
             Console.WriteLine($"                                                                                           EXP :  {Game.Player.Exp}        ");
             Console.WriteLine("                             을 발견했다.");
-            Console.WriteLine($"                          이제 무엇을 할까?                                               LEVEL :  {Game.Player.Level}      ");
+            Console.WriteLine($"                          이제 무엇을 할까?                                                LEVEL :  {Game.Player.Level}      ");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
@@ -78,7 +78,6 @@
                         if (isChurDone == false)
                         {
                             isChurDone = true;
-                            Game.Player.ExpUp(50);
                             Console.WriteLine("언제 먹어도 눈이 번쩍 떠지는 맛");
                             Console.WriteLine("츄 르 는 너 무 맛 있 어 ! ! !");
                             Console.WriteLine();
@@ -87,7 +86,6 @@
                             Console.WriteLine();
                             Console.WriteLine("츄르는 고양이의 인생이다.");
                             Console.WriteLine("인생의 경험치가 조금 쌓인 기분이 든다.");
-                            // TODO: 커서 위치 조정
                             Console.ReadKey();
                             Console.WriteLine();
                             //경험치 증가
@@ -116,8 +114,9 @@
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
-                            // 경험치 증가
+                            // 경험치, 속도 증가
                             Game.Player.ExpUp(50);
+                            Game.Player.SpeedUp(5);
                             Console.ReadKey();
                             Console.WriteLine();
                             Console.WriteLine("바구니에는 더이상 볼 일이 없다...");
@@ -146,8 +145,9 @@
                             Console.WriteLine("다리 근육이 조금은 탄탄해진 기분이 든다.");
                             Console.ReadKey();
                             Console.WriteLine();
-                            // 경험치 증가
+                            // 경험치, 속도 증가
                             Game.Player.ExpUp(50);
+                            Game.Player.SpeedUp(5);
                         }
                         else if((isChurDone == false) || (isBallDone  == false))
                         {

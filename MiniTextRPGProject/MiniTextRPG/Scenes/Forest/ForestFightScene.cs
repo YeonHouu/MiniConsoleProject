@@ -15,8 +15,8 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine();
             Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                    왼쪽 숲으로 오자마자 야생의 닭이 보인다...!                                    SPEED :  {Game.Player.Speed}     ");
-            Console.WriteLine("                      이 닭을 어떻게 할까?                                                           ");
+            Console.WriteLine($"                                                                                SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                    {Game.Chicken.Name}이랑 싸운다!                                                                     ");
             Console.WriteLine($"                                                                                     EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
             Console.WriteLine($"                                                                                        LEVEL :  {Game.Player.Level}      ");
@@ -25,11 +25,13 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine();
             Console.WriteLine("*---------------------------------------------------------------------*            *-----------------------*");
 
+            //Game.Monster.PrintInfo(Game.Chicken);
+            
         }
         public override void Choice()
         {
-            Console.WriteLine(" 1. 받아랏 냥냥펀치 ! ! !");
-            Console.WriteLine(" 2. 부리가 날카로워보인다.. 도망간다...");
+            Console.WriteLine(" 1. 냥냥펀치");
+            Console.WriteLine(" 2. 힘들다.. 도망간다...");
         }
         public override void Result()
         {
@@ -38,6 +40,8 @@ namespace MiniTextRPG.Scenes.Forest
                 switch (inputKey)
                 {
                     case ConsoleKey.D1:
+                        Game.Player.AttackMonster(Game.Chicken);
+                        Game.Chicken.AttackPlayer();
                         isCorretInputKey = true;
                         break;
 
@@ -73,7 +77,14 @@ namespace MiniTextRPG.Scenes.Forest
             switch (inputKey)
             {
                 case ConsoleKey.D1:
-                    Game.ChangeScene("ForestFight");
+                    if(Game.Chicken.IsAlive == false)
+                    {
+                        Game.ChangeScene("Home");
+                    }
+                    else
+                    {
+                        Game.ChangeScene("ForestFight");
+                    }
                     break;
                 case ConsoleKey.D2:
                     Game.ChangeScene("Forest");

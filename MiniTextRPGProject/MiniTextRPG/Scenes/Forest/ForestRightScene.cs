@@ -15,7 +15,7 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine();
             Console.WriteLine($"                                                                                           HP :  {Game.Player.Hp}       ");
             Console.WriteLine();
-            Console.WriteLine($"                    왼쪽 숲으로 오자마자 야생의 닭이 보인다...!                                    SPEED :  {Game.Player.Speed}     ");
+            Console.WriteLine($"                 왼쪽 숲으로 오자마자 {Game.Chicken.Name}이 보인다...!                                    SPEED :  {Game.Player.Speed}     ");
             Console.WriteLine("                      이 닭을 어떻게 할까?                                                           ");
             Console.WriteLine($"                                                                                     EXP :  {Game.Player.Exp}        ");
             Console.WriteLine();
@@ -24,14 +24,11 @@ namespace MiniTextRPG.Scenes.Forest
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("*---------------------------------------------------------------------*            *-----------------------*");
-
         }
         public override void Choice()
         {
             Console.WriteLine(" 1. 받아랏 냥냥펀치 ! ! !");
             Console.WriteLine(" 2. 부리가 날카로워보인다.. 도망간다...");
-            
-
         }
         public override void Result()
         {
@@ -44,10 +41,6 @@ namespace MiniTextRPG.Scenes.Forest
                         break;
 
                     case ConsoleKey.D2:
-                        isCorretInputKey = true;
-                        break;
-
-                    case ConsoleKey.D3:
                         isCorretInputKey = true;
                         break;
 
