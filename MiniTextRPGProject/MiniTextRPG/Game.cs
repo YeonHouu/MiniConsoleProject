@@ -46,9 +46,11 @@ namespace MiniTextRPG
 
             // 플레이어 인스턴스 생성
             player = new Player();
+
+            // 몬스터 인스턴스 생성
             chicken = Monster.chicken;
 
-            // 콘솔에서 커버 숨김
+            // 콘솔에서 커서 숨김
             Console.CursorVisible = false;
         }
 
