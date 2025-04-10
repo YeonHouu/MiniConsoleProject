@@ -18,6 +18,8 @@ namespace MiniTextRPG
         public void AddItem(Item item)
         {
             inventory.Add(item);
+            Console.WriteLine();
+            Print();
         }
 
         public void Print()

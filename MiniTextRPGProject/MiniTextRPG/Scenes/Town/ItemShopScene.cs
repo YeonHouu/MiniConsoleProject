@@ -74,6 +74,7 @@
                             Console.WriteLine("아싸! 생선캔은 이제 내꺼다!");
                             Console.WriteLine("주인은 아직도 세상모르게 졸고 있다.");
                             Console.WriteLine("가벼운 발걸음으로 마을으로 향한다 ♪");
+                            Game.Player.Inventory.AddItem(Item.fishCan);
 
                             break;
 
@@ -112,6 +113,8 @@
                                 Console.WriteLine("어라? 츄르만큼 가볍다!");
                                 Console.WriteLine("이제 너무나도 사랑하는 물고기를 잡을 수 있을지도 모른다 ! ! !");
                                 Console.WriteLine("가벼운 발걸음으로 마을으로 향한다 ♪");
+                                Game.Player.Inventory.AddItem(Item.fishPole);
+
                             }
                             break;
 
